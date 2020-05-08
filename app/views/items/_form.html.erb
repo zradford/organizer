@@ -1,4 +1,4 @@
-<%= form_with(model: @item, local: true) do |form| %>
+<%= form_for @item, url: items_path, local: true do |form| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -14,7 +14,7 @@
   <div class="item-form">
     <div class="field">
       <%= label_tag :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, required: true %>
     </div>
 
     <div class="field">
@@ -25,6 +25,11 @@
     <div class="field">
       <%= label_tag :price %>
       <%= form.text_field :price %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :currency %>
+      <%= form.select :currency, Item.currency_list, include_blank: "Select Currency" %>
     </div>
 
     <div class="field">
