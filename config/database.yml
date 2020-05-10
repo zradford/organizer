@@ -13,5 +13,11 @@ test:
   <<: *default
   database: organizer_development_test
 production:
-  <<: *default
-  database: organizer_development
+  adapter: postgresql
+  encoding: utf8
+  database: d3okd00rb78g18
+  username: sbvsxppwldjfdt
+  password: 150dda1f42fd92c6babe82e6a0005a71cae0f9424bfd2ae9413953cefe66e4d6
+  host: ec2-54-147-209-121.compute-1.amazonaws.com
+  sslmode: require
+  port: 5432
