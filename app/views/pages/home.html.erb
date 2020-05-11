@@ -4,3 +4,7 @@
 
 <%= link_to "New User?", new_user_registration_path %>
 <%= link_to "Log In", new_user_session_path  %>
+
+<% if @user %>
+   <% render partial 'users/characters' %>
+<% end %>
