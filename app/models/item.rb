@@ -1,10 +1,14 @@
 class Item < ApplicationRecord
+   belongs_to :character
    validates_presence_of :name
-   validates :currency,
-    :inclusion  => { :in => [ '','Copper', 'Silver', 'Electrum', 'Gold', 'Platinum' ],
-    :message    => "%{value} is not a valid currency" } if :currency.present?
+   before_save :validate_currency if :currency.present?
 
-   def self.currency_list
+
+   def validate_currency
+      currency_list.include?(self.currency)
+   end
+
+   def currency_list
       [ 'Copper', 'Silver', 'Electrum', 'Gold', 'Platinum' ]
    end
 
