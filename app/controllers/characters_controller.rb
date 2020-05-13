@@ -29,7 +29,7 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.save
-        format.html { redirect_to welcomes_path, notice: 'Character was successfully created.' }
+        format.html { redirect_to user_path(current_user), notice: 'Character was successfully created.' }
         format.json { render :show, status: :created, location: @character }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CharactersController < ApplicationController
   def update
     respond_to do |format|
       if @character.update(character_params)
-        format.html { redirect_to @character, notice: 'Character was successfully updated.' }
+        format.html { redirect_to user_path(current_user), notice: 'Character was successfully updated.' }
         format.json { render :show, status: :ok, location: @character }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class CharactersController < ApplicationController
   def destroy
     @character.destroy
     respond_to do |format|
-      format.html { redirect_to characters_url, notice: 'Character was successfully destroyed.' }
+      format.html { redirect_to user_path(current_user), notice: 'Character was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

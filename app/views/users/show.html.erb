@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @user.display_name %>'s Homepage</h1>
+
+
+<% if @user.characters.count > 0 %>
+  <% @user.characters.each do |c| %>
+    <%= render 'character', character: c %>
+  <% end %>
+<% else %>
+  You have no characters! <%= link_to "Create A New One", new_character_path %>
+<% end %>
+
+<br>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

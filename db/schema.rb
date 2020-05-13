@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_11_050724) do
+ActiveRecord::Schema.define(version: 2020_05_13_034048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,22 @@ ActiveRecord::Schema.define(version: 2020_05_11_050724) do
     t.integer "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "type"
+    t.integer "strength_modifier"
+    t.integer "dexterity_modifier"
+    t.integer "constitution_modifier"
+    t.integer "intelligence_modifier"
+    t.integer "wisdom_modifier"
+    t.integer "charisma_modifier"
+    t.integer "proficiency_bonus"
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "quantity"
+    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "currency"

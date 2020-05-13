@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  color: white;
+  background-color: #2890b0;
+  height: 30px;
+  justify-content: right;
+  align-items: center;
+}
+
+.header-item {
+  &:hover {
+    background-color: #1a5e73;
+    color: black;
+  }
+  text-align: center;
+}
+
+.header-item > a:visited {
+  color: white;
+}
+a {
+  text-decoration: none;
+  padding: 6px 14px;
+}
