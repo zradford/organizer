@@ -1,10 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+   <%= render 'users/home' %>
+<% else %>
+   <h1>Welcomes</h1>
 
-<h1>Welcomes</h1>
-
-<%= link_to "New User?", new_user_registration_path %>
-<%= link_to "Log In", new_user_session_path  %>
-
-<% if @user %>
-   <% render partial 'users/characters' %>
+   <%= link_to "New User?", new_user_registration_path %>
+   <%= link_to "Log In", new_user_session_path  %>
 <% end %>

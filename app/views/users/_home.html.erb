@@ -1,0 +1,15 @@
+<div class="home">  <!-- user container -->
+  <div> <!-- User info -->
+    <h2><%= @user.display_name %></h2>
+  </div> 
+  <div> <!-- Character container -->
+    <% if @user.characters.count > 0 %>
+      <div class="container">
+        <% @user.characters.each do |char| %>
+          <%= render 'users/character', character: char %>
+        <% end %>
+      </div>
+    <% end %>
+    <%= link_to "Create a New Character", new_character_path %>
+  </div>
+</div>

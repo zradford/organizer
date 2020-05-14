@@ -4,9 +4,11 @@
 
 
 <% if @user.characters.count > 0 %>
-  <% @user.characters.each do |c| %>
-    <%= render 'character', character: c %>
-  <% end %>
+  <div class="character-container">
+    <% @user.characters.each do |c| %>
+      <%= render 'character', character: c %>
+    <% end %>
+  </div>
 <% else %>
   You have no characters! <%= link_to "Create A New One", new_character_path %>
 <% end %>

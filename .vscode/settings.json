@@ -1,0 +1,43 @@
+{
+  "diffEditor.renderSideBySide": false,
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "editor.tabCompletion": "on",
+  "editor.autoClosingBrackets": "always",
+  "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
+  "extensions.ignoreRecommendations": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "[html]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "git.enableSmartCommit": true,
+  "[javascript]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "themeGenerator.colors": {
+      "background": "#21282d",
+      "foreground": "#fff",
+      "primary": "#327193",
+      "keywords": "#43baba",
+      "functions": "#3fa5c1",
+      "strings": "#b9ecfa",
+      "numbers": "#8789c0",
+      "punctuation": "#494f53",
+      "operators": "#327193",
+      "comment": "#3d4b54",
+      "tags": "#43baba",
+      "attributes": "#3fa5c1",
+      "properties": "#43baba",
+      "builtins": "#b5ca8d",
+      "variables": "#fff",
+      "types": "#3fa5c1"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+        "html.erb": "html",
+        "erb": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+}

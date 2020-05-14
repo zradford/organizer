@@ -16,10 +16,36 @@
   text-align: center;
 }
 
-.header-item > a:visited {
-  color: white;
-}
-a {
+.header-item > a {
+  &:visited {
+    color: white;
+  }
   text-decoration: none;
   padding: 6px 14px;
+}
+
+
+.tile {
+  border: 1px solid #123641;
+  background-color: #41caf3;
+  &:hover {
+    background-color: #3198b8;;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.character {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 25%;
+  margin: 1%;
+  padding: 10px;
+}
+
+
+.home {
+  padding: 10px;
 }

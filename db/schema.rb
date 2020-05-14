@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_13_045311) do
+ActiveRecord::Schema.define(version: 2020_05_14_043054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 2020_05_13_045311) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name_of_class"
-    t.integer "strength_modifier"
-    t.integer "dexterity_modifier"
-    t.integer "constitution_modifier"
-    t.integer "intelligence_modifier"
-    t.integer "wisdom_modifier"
-    t.integer "charisma_modifier"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "constitution"
+    t.integer "intelligence"
+    t.integer "wisdom"
+    t.integer "charisma"
     t.integer "proficiency_bonus"
     t.index ["user_id"], name: "index_characters_on_user_id"
   end

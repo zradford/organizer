@@ -1,5 +1,8 @@
-<div>
-  <div><%= c.name %></div>
-  <div><%= c.level %></div>
+<div class="tile character">
+  <div>
+    <h3><%= character.name %></h3>
+  </div>
+  <div><%= "#{character.name_of_class} - lvl: #{character.level}" %></div>
+
+  <%= link_to 'edit', edit_character_path(character) %>
 </div>
-<%= link_to 'edit', edit_character_path(c) %>
