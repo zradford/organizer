@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Edit', edit_character_path(@character) %> |
-<%= link_to 'Back', characters_path %>
+<%= link_to 'Home', user_path(id: current_user.id) %>
+<br>
+
+<h2><%= @character.name %></h2>
+<div class="two-column">
+
+</div>
+
+<hr>
+<% if @character.items.count > 0  %>
+  <% @character.items.each do |item| %>
+    <%= render 'item', item: item %>
+  <% end %>
+<% end %>
+
+<%= link_to "Add Item", new_item_path %>

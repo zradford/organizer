@@ -69,8 +69,12 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
     end
 
+    def set_character
+      @character = Character.find(params[:character_id])
+    end
+
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:name, :description, :price, :quantity, :currency)
+      params.require(:item).permit(:name, :description, :price, :quantity, :currency, :character_id)
     end
 end

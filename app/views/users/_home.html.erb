@@ -4,7 +4,7 @@
   </div> 
   <div> <!-- Character container -->
     <% if @user.characters.count > 0 %>
-      <div class="container">
+      <div class="flex">
         <% @user.characters.each do |char| %>
           <%= render 'users/character', character: char %>
         <% end %>

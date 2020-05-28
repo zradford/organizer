@@ -1,6 +1,6 @@
+<%= link_to 'Show', @character %> |
+<%= link_to 'Home', user_path(id: current_user.id) %>
+
 <h1>Editing Character</h1>
 
 <%= render 'form', character: @character %>
-
-<%= link_to 'Show', @character %> |
-<%= link_to 'Back', characters_path %>

@@ -21,6 +21,10 @@ describe "Characters" do
     expect(@character.strength_modifier).to eq 1
   end
 
+  it "should shorten the ability names" do
+    expect(@character.strength_short_name).to be 'str'
+  end
+
   describe "can have items" do 
     before do 
       @item_one = Item.create(name: "sword", description: "a sword", character: @character)

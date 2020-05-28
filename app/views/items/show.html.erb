@@ -1,7 +1,7 @@
 <p><%= @item.name %></p>
 <p><%= @item.description %></p>
-<p><%= @item.price %></p>
+<p><%= @item.price_and_currency %></p>
 <p><%= @item.quantity %></p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<%= link_to 'Home', user_path(id: current_user.id) %>

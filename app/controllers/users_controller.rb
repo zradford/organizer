@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :verify_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   # GET /users
   # GET /users.json
   def index
+    redirect_to user_path(id: current_user.id)
   end
 
   # GET /users/1
@@ -65,6 +67,12 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def verify_user
+      if current_user.id != @user.id
+        redirect_to user_path(id: current_user.id)
+      end
     end
 
     def user_params

@@ -1,0 +1,16 @@
+<div class="tile item">
+  <a href=<%= "#{item_path(id: item.id)}" %>>
+    <div class="left-column"> 
+      <div class="item-head">
+        <h3><%= item.name %></h3>
+      </div>
+      <div class>
+        <%= item.description %>
+      </div>
+    </div>
+    <div class="right-column">
+      <%=  %>
+    </div>
+    <%= link_to 'edit', edit_item_path(item) %>
+  </a>
+</div>
